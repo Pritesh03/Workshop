@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMasterPage.master.cs" Inherits="Student_StudentMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="100%">
+                <tr>
+                    <td width="100%" height="100px">Header
+                        <asp:Menu ID="mAdmin" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Helvetica" Orientation="Horizontal" Width="100%">
+                            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="8px" VerticalPadding="4px" />
+                            <DynamicMenuStyle BackColor="#B5C7DE" />
+                            <DynamicSelectedStyle BackColor="#507CD1" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Student/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Student/Request.aspx" Text="Request" Value="Request"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Student/Workshop.aspx" Text="Workshop" Value="Workshop"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Student/Profile.aspx" Text="Profile" Value="Profile"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Student/Material.aspx" Text="Material" Value="Material"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="8px" VerticalPadding="4px" />
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" height="300px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" height="50px">Footer</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

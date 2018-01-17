@@ -1,0 +1,6 @@
+C:\Users\admin\source\repos\WorkshopSolution\BOL\bin\Debug\BOL.dll
+C:\Users\admin\source\repos\WorkshopSolution\BOL\bin\Debug\BOL.pdb
+C:\Users\admin\source\repos\WorkshopSolution\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\WorkshopSolution\BOL\obj\Debug\BOL.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\WorkshopSolution\BOL\obj\Debug\BOL.dll
+C:\Users\admin\source\repos\WorkshopSolution\BOL\obj\Debug\BOL.pdb
