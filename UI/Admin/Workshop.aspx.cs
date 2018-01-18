@@ -11,7 +11,11 @@ public partial class Admin_Workshop : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        List<tbl_Workshop> lstWorkshops = new List<tbl_Workshop>();
+        WorkshopBusiness workshopBusiness = new WorkshopBusiness();        
+        lstWorkshops = workshopBusiness.GetWorkshops();
+        gvWorkshops.DataSource = lstWorkshops;
+        gvWorkshops.DataBind();
     }
 
     protected void btnSave_Click(object sender, EventArgs e)

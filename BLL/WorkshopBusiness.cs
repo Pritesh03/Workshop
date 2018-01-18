@@ -23,8 +23,13 @@ namespace BLL
             else
             {
                 return false;
-            }
-                
+            }                
+        }
+
+        public List<tbl_Workshop> GetWorkshops()
+        {
+            WorkshopDB workshopDB = new WorkshopDB();
+            return workshopDB.GetWorkshops();
         }
     }
 }
