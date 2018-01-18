@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.master" AutoEventWireup="true" CodeFile="Workshop.aspx.cs" Inherits="Admin_Workshop" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+      
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
@@ -34,16 +37,40 @@
             </tr>
 
             <tr>
-                <td style="text-align: right; padding: 15px;">
-                    <asp:Button ID="btnSave" runat="server" Text="Save" Font-Bold="True" OnClick="btnSave_Click" CssClass="btn btn-primary" />
+                <td style="text-align: right; padding: 15px; text-align:center;" colspan="2">
+                    <asp:Button ID="btnSave" runat="server" Text="Save" Font-Bold="True" OnClick="btnSave_Click" CssClass="btn btn-primary" Width="120px" />
+                    <asp:Button ID="btnUpdate" runat="server" Text="Update" Font-Bold="True" CssClass="btn btn-info" Width="120px" OnClick="btnUpdate_Click" />
+                    <asp:Button ID="btnDelete" runat="server" Text="Delete" Font-Bold="True" CssClass="btn btn-danger" Width="120px" OnClick="btnDelete_Click" />
                 </td>
-                <td>&nbsp;
+                <td class="auto-style1">&nbsp;
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <asp:GridView ID="gvWorkshops" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None" CellSpacing="5">
+                <td colspan="2" style="text-align:center">
+                    <asp:GridView ID="gvWorkshops" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None" CellSpacing="5" AutoGenerateSelectButton="True" AutoGenerateColumns="False" style="margin:auto;" DataKeyNames="WorkshopId" OnSelectedIndexChanged="gvWorkshops_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:BoundField DataField="WorkshopId" HeaderText="Workshop Id">
+                            <HeaderStyle Width="200px" />
+                            <ItemStyle Width="200px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="WorkshopTitle" HeaderText="Workshop Title">
+                            <HeaderStyle Width="200px" />
+                            <ItemStyle Width="200px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="WorkshopDate" DataFormatString="{0:dd/MMM/yyyy}" HeaderText="Workshop Date">
+                            <HeaderStyle Width="200px" />
+                            <ItemStyle Width="200px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="WorkshopDuration" HeaderText="Workshop Duration">
+                            <HeaderStyle Width="200px" />
+                            <ItemStyle Width="200px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="WorkshopTopics" HeaderText="Workshop Topics">
+                            <HeaderStyle Width="200px" />
+                            <ItemStyle Width="200px" />
+                            </asp:BoundField>
+                        </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Height="30px" HorizontalAlign="Center" Width="200px" />

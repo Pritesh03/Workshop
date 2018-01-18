@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace BOL
 {
     public class tbl_Workshop
-    {
+    {        
         public int WorkshopId { get; set; }
 
         public string WorkshopTitle { get; set; }

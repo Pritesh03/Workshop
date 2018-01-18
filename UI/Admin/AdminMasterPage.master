@@ -7,15 +7,16 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" href="../Css/bootstrap.css" />
+    <%--<link rel="stylesheet" href="../Css/bootstrap.css" />--%>
+    <link rel="stylesheet" href="../Css/style.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <table width="100%">
                 <tr>
-                    <td width="100%" height="100px">Header                        
-                        <asp:Menu ID="mAdmin" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Helvetica" Orientation="Horizontal" Width="100%">
+                    <td width="100%" height="100px">Header                        :
+                        <asp:Menu ID="mAdmin" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Helvetica" Orientation="Horizontal" Width="100%" style="border-radius:5px;">
                             <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
                             <DynamicMenuItemStyle HorizontalPadding="8px" VerticalPadding="4px" />
                             <DynamicMenuStyle BackColor="#B5C7DE" />
@@ -29,7 +30,7 @@
                                 <asp:MenuItem NavigateUrl="~/Admin/Material.aspx" Text="Material" Value="Material"></asp:MenuItem>
                             </Items>
                             <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                            <StaticMenuItemStyle HorizontalPadding="8px" VerticalPadding="4px" />
+                            <StaticMenuItemStyle HorizontalPadding="20px" VerticalPadding="10px" />
                             <StaticSelectedStyle BackColor="#507CD1" />
                         </asp:Menu>
                     </td>
